@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motovlog do Zero ao Crescimento</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* RESET E CONFIGURAÇÕES BÁSICAS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            background-color: #121212; /* Fundo escuro (Asfalto) */
+            color: #f5f5f5;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 600px; /* Limita a largura para parecer um feed/app (foco total) */
+            margin: 0 auto;
+            background-color: #1e1e1e;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+
+        /* TIPOGRAFIA */
+        h1 {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #ffffff;
+            line-height: 1.2;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: #ffcc00; /* Amarelo alerta */
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            color: #cccccc;
+        }
+
+        .highlight {
+            color: #ffffff;
+            font-weight: bold;
+            background-color: #333;
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+
+        /* SEÇÕES */
+        section {
+            padding: 30px 20px;
+            border-bottom: 1px solid #333;
+        }
+
+        /* HEADER */
+        .hero {
+            text-align: center;
+            padding-top: 40px;
+            background: linear-gradient(180deg, #121212 0%, #1e1e1e 100%);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #00ff88; /* Verde neon para quebrar objeção */
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        /* IMAGENS */
+        .img-placeholder {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 2px solid #333;
+            display: block;
+        }
+        
+        .caption {
+            font-size: 0.8rem;
+            color: #777;
+            text-align: center;
+            margin-top: -15px;
+            margin-bottom: 20px;
+        }
+
+        /* LISTA DE BENEFÍCIOS */
+        .check-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .check-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .check-list li span {
+            color: #00ff88;
+            margin-right: 10px;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* CAIXAS PRA QUEM É / NÃO É */
+        .audience-box {
+            background-color: #252525;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .yes { border-left: 5px solid #00ff88; }
+        .no { border-left: 5px solid #ff4444; }
+
+        .audience-title {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        /* PREÇO E CTA */
+        .offer-section {
+            text-align: center;
+            background-color: #222;
+            padding: 40px 20px;
+        }
+
+        .price {
+            font-size: 3rem;
+            font-weight: 900;
+            color: #ffffff;
+            margin: 10px 0;
+        }
+
+        .price span {
+            font-size: 1rem;
+            font-weight: 400;
+            vertical-align: middle;
+        }
+
+        .cta-button {
+            display: block;
+            width: 100%;
+            padding: 20px;
+            background-color: #00b347; /* Verde WhatsApp/Venda */
+            color: white;
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: bold;
+            border-radius: 50px;
+            text-align: center;
+            margin-top: 20px;
+            box-shadow: 0 4px 15px rgba(0, 179, 71, 0.4);
+            transition: transform 0.2s, background-color 0.2s;
+            animation: pulse 2s infinite;
+        }
+
+        .cta-button:hover {
+            background-color: #009e3e;
+            transform: scale(1.02);
+        }
+
+        /* GARANTIA */
+        .guarantee {
+            text-align: center;
+            font-size: 0.9rem;
+            margin-top: 30px;
+            padding: 15px;
+            border: 1px dashed #555;
+            border-radius: 8px;
+        }
+
+        /* ANIMAÇÃO BOTÃO */
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(0, 179, 71, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(0, 179, 71, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 179, 71, 0); }
+        }
+
+        /* RESPONSIVO */
+        @media (max-width: 480px) {
+            h1 { font-size: 1.8rem; }
+            .price { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- 1. HEADLINE -->
+        <section class="hero">
+            <h1>Aprenda a gravar motovlog do zero usando apenas o celular e uma moto simples</h1>
+            <p class="subtitle">👉 Sem câmera cara, sem moto cara e sem papo de curso.</p>
+            
+            <!-- ESPAÇO PARA SUA FOTO -->
+            <!-- Substitua o src abaixo pelo link da sua foto (você e a moto) -->
+            <img src="https://placehold.co/600x400/333/FFF?text=FOTO+SUA+COM+A+MOTO" alt="Foto do autor na moto" class="img-placeholder">
+        </section>
+
+        <!-- 2. IDENTIFICAÇÃO -->
+        <section>
+            <p>Se você tem vontade de gravar motovlog, mas acha que precisa de uma moto top ou câmera profissional, <span class="highlight">esse guia é pra você.</span></p>
+            <p>Eu cresci no YouTube gravando do jeito mais simples possível, e aqui eu explico exatamente o que funciona.</p>
+        </section>
+
+        <!-- 3. O QUE É -->
+        <section>
+            <h2>📦 O que é esse Guia?</h2>
+            <p>O <strong>Motovlog do Zero ao Crescimento</strong> é um ebook direto ao ponto, criado pra quem quer gravar, postar e crescer no YouTube sem complicação.</p>
+            <p>Não é curso caro, não é promessa maluca. É prática real, testada no dia a dia.</p>
+            
+            <!-- ESPAÇO PARA PRINT DO YOUTUBE STUDIO -->
+            <!-- Substitua o src abaixo pelo print dos seus resultados -->
+            <img src="https://placehold.co/600x300/222/FFF?text=PRINT+DO+SEU+YOUTUBE+STUDIO" alt="Resultados YouTube" class="img-placeholder">
+            <div class="caption">Resultados reais aplicando o método simples.</div>
+        </section>
+
+        <!-- 4. O QUE VAI APRENDER -->
+        <section>
+            <h2>✅ O que você vai aprender</h2>
+            <ul class="check-list">
+                <li><span>✔</span> Como gravar motovlog usando apenas o celular</li>
+                <li><span>✔</span> Onde posicionar o celular para gravar melhor</li>
+                <li><span>✔</span> Tipos de vídeos de moto que dão visualizações</li>
+                <li><span>✔</span> Como usar Shorts do jeito certo</li>
+                <li><span>✔</span> Erros que travam canais pequenos</li>
+                <li><span>✔</span> Como crescer sem câmera cara e sem moto cara</li>
+            </ul>
+        </section>
+
+        <!-- 5. PRA QUEM É -->
+        <section>
+            <div class="audience-box yes">
+                <span class="audience-title" style="color:#00ff88;">✅ É pra você se:</span>
+                <p style="margin-bottom:5px;">• Tem moto simples (160, 175, Fan, Titan, Pop etc.)</p>
+                <p style="margin-bottom:5px;">• Grava ou quer gravar com celular</p>
+                <p style="margin-bottom:0;">• Quer crescer no YouTube de verdade</p>
+            </div>
+
+            <div class="audience-box no">
+                <span class="audience-title" style="color:#ff4444;">❌ Não é pra você se:</span>
+                <p style="margin-bottom:5px;">• Procura fórmula mágica</p>
+                <p style="margin-bottom:5px;">• Quer tudo sem postar</p>
+                <p style="margin-bottom:0;">• Não quer aplicar nada</p>
+            </div>
+        </section>
+
+        <!-- 6. PREÇO E CTA -->
+        <section class="offer-section">
+            <p>Todo esse guia sai por apenas:</p>
+            <div class="price"><span>R$</span> 39,90</div>
+            <p style="color: #ffcc00; font-size: 0.9rem;">(Menos que um tanque de gasolina)</p>
+            
+            <p>👉 Acesso imediato após a compra.</p>
+
+            <!-- BOTÃO DE COMPRA -->
+            <!-- Substitua o href abaixo pelo seu link de checkout da Kiwify/Hotmart -->
+            <a href="#LINK_DO_CHECKOUT_AQUI" class="cta-button">
+                QUERO APRENDER A GRAVAR MOTOVLOG 
+            </a>
+
+            <!-- 7. GARANTIA -->
+            <div class="guarantee">
+                <h3>🔒 Garantia Blindada</h3>
+                <p style="font-size: 0.85rem; margin-top: 10px;">
+                    Se você comprar, ler e achar que não é pra você, pode pedir reembolso dentro do prazo da plataforma (7 dias). Sem perguntas.
+                </p>
+            </div>
+        </section>
+
+        <footer style="text-align: center; padding: 20px; font-size: 0.8rem; color: #555;">
+            &copy; 2024 Motovlog do Zero. Todos os direitos reservados.
+        </footer>
+
+    </div>
+</body>
+</html>
